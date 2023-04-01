@@ -30,3 +30,24 @@ once its been set up.
 
 After activating the pyenv environment, run this:
 `pgcli -h localhost -p 5432 -u root -d ny_taxi`
+
+* [NY Taxi Data Link](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+
+
+* [Jan 2023 Yellow Taxi Parquet](https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet)
+
+* [Data Dictionary](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf)
+
+* [potential link for iterating through parquet file](https://github.com/aws/aws-sdk-pandas/issues/660)
+
+
+## parquet files
+
+`pip install parquet-tools` install this to inspect parquet tools.
+
+`parquet-tools inspect yellow_tripdata_2023-01.parquet` run this in the CLI to
+read the metadata of the parquet file.
+
+* [No MKL error](https://stackoverflow.com/questions/55778337/what-is-intel-mkl-fatal-error-cannot-load-libmkl-core-dylib-while-running-pysp)
+
+
