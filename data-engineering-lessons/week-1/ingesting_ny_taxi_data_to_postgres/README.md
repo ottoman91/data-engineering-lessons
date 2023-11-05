@@ -16,6 +16,14 @@ services:
       retries: 5
     restart: always
 
+
+* In the above docker postgres image, the `volumes` command tells us which file we need to map from the host machine to the container. This process is called mounting.
+
+* We also need to map a port from the host machine to a port in the database, in order to be able to send requests to the container.
+
+
+
+
 We can use the following command to run the docker postgres image.
 docker run -it \
   -e POSTGRES_USER="root" \
@@ -27,6 +35,11 @@ docker run -it \
 
 * pgcli is the python CLI program used for communicating with the postgres database
 once its been set up.
+
+
+* See all pyenv versions by running: `pyenv versions`
+
+* Run a specific pyenv environment by running `pyenv activate [name_of_environment]`
 
 After activating the pyenv environment, run this:
 `pgcli -h localhost -p 5432 -u root -d ny_taxi`
