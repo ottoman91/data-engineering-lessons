@@ -1,6 +1,7 @@
 
 The following is the definition of the docker postgres image.
 
+```
 services:
   postgres:
     image: postgres:13
@@ -15,7 +16,7 @@ services:
       interval: 5s
       retries: 5
     restart: always
-
+```
 
 * In the above docker postgres image, the `volumes` command tells us which file we need to map from the host machine to the container. This process is called mounting.
 
@@ -25,6 +26,7 @@ services:
 
 
 We can use the following command to run the docker postgres image.
+```
 docker run -it \
   -e POSTGRES_USER="root" \
   -e POSTGRES_PASSWORD="root" \
@@ -32,8 +34,9 @@ docker run -it \
   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
   -p 5432:5432 \
   postgres:13
+```
 
-* pgcli is the python CLI program used for communicating with the postgres database
+* `pgcli` is the python CLI program used for communicating with the postgres database
 once its been set up.
 
 
